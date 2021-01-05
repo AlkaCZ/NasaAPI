@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UkolPlanety.View.ASpaceObjectPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <Label BackgroundColor="Gray" Text="Add information about your object" TextColor="White" FontSize="Title" HorizontalTextAlignment="Center"></Label>
+            <Entry Placeholder="Name" HorizontalOptions="CenterAndExpand" Text="{Binding Name}" TextColor="White" PlaceholderColor="White"></Entry>
+            <Entry Placeholder="Size" HorizontalOptions="CenterAndExpand" Text="{Binding Size}" TextColor="White" PlaceholderColor="White"></Entry>
+            <Entry Placeholder="Material of Space object" HorizontalOptions="CenterAndExpand" Text="{Binding Material}" TextColor="White" PlaceholderColor="White"></Entry>
+            <Button Text="Save" x:Name="SaveButton" VerticalOptions="End" BackgroundColor="Red" TextColor="White" Clicked="Save_Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
