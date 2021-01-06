@@ -21,7 +21,8 @@ namespace UkolPlanety.View
         {
             Name = spaceObject.Name;
             Size = spaceObject.Size;
-            //Material = spaceObject.Material;
+            Speed = spaceObject.Speed;
+            IsHazerdious = spaceObject.IsHazerdious;
         }
         string _Name;
 
@@ -46,20 +47,31 @@ namespace UkolPlanety.View
             }
 
         }
-        string _Material;
+        bool _IsHazerdious;
 
-        public string Material
+        public bool IsHazerdious
         {
-            get { return _Material; }
+            get { return _IsHazerdious; }
             set
             {
-                _Material = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Material"));
+                _IsHazerdious = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsHazerdious"));
+            }
+        }
+        double _Speed;
+
+        public double Speed
+        {
+            get { return _Speed; }
+            set
+            {
+                _Speed = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Speed"));
             }
         }
         public ASpaceObject ToSpaceObject()
         {
-            ASpaceObject s = new ASpaceObject { Name = this.Name, /*Material = this.Material*/ Size = this.Size };
+            ASpaceObject s = new ASpaceObject { Name = this.Name, Size = this.Size, Speed = this.Speed, IsHazerdious = this.IsHazerdious};
             return s;
         }
 
