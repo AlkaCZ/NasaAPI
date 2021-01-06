@@ -21,7 +21,7 @@ namespace UkolPlanety.View
         {
             Name = spaceObject.Name;
             Size = spaceObject.Size;
-            Material = spaceObject.Material;
+            //Material = spaceObject.Material;
         }
         string _Name;
 
@@ -59,7 +59,7 @@ namespace UkolPlanety.View
         }
         public ASpaceObject ToSpaceObject()
         {
-            ASpaceObject s = new ASpaceObject { Name = this.Name, Material = this.Material, Size = this.Size };
+            ASpaceObject s = new ASpaceObject { Name = this.Name, /*Material = this.Material*/ Size = this.Size };
             return s;
         }
 

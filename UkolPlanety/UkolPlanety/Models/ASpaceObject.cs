@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace UkolPlanety.Models
 {
@@ -8,7 +9,8 @@ namespace UkolPlanety.Models
     {
         public string Name { get; set; }
         public double Size { get; set; }
-        public string Material { get; set; }
+        public bool IsHazerdious { get; set; }
+        public double Speed { get; set; }
 
         public ASpaceObject()
         {

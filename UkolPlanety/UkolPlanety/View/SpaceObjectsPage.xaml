@@ -6,20 +6,20 @@
         <StackLayout BackgroundColor="Black">
             <Label Text="Objects" TextColor="White" BackgroundColor="Black" FontSize="Title" HorizontalOptions="Center"></Label>
             <ListView x:Name="MyListView" ItemTapped="MyListView_ItemTapped" ItemsSource="{Binding AllSpaceObjects}" HasUnevenRows="True">
-
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
                                 <Label Text="{Binding Name}" TextColor="White" FontSize="Large"></Label>
                                 <Label Text="{Binding Size}" TextColor="Aqua" FontSize="Medium"></Label>
-                                <Label Text="{Binding Material}" TextColor="Orange" FontSize="Medium"></Label>
+                                <Label Text="{Binding Speed}" TextColor="Orange" FontSize="Medium"></Label>
+                                <Label Text="{Binding IsHazerdious}" TextColor="Red" FontSize="Medium"></Label>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="StraightAddButt" Text="Add new space object" Clicked="Straight_Button_Clicked" TextColor="White" BackgroundColor="Red" HorizontalOptions="End"></Button>
+            <Button x:Name="StraightAddButt" Text="Refresh" Clicked="Straight_Button_Clicked" TextColor="White" BackgroundColor="Red" HorizontalOptions="EndAndExpand"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
