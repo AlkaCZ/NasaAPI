@@ -21,17 +21,15 @@ namespace UkolPlanety.Models
         {
             AllSpaceObjects = new ObservableCollection<ASpaceObject>();
             AllSpaceObjects.Add(new ASpaceObject { IsHazerdious = false, Name = "Test", Size = 232, Speed = 11 });
-
             RefreshAPI();
-            AllSpaceObjects.Add(new ASpaceObject { IsHazerdious = false, Name = "Negr", Size = 44444, Speed = 8 });
         }
         public async Task RefreshAPI()
         {
             HttpClient myclient = new HttpClient();
             DateTime dateTime = DateTime.Now;
             DateTime dateTime1 = dateTime.AddDays(-1);
-            //string url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=" + dateTime1.ToString("yyyy-MM-dd") + "&end_date=" + dateTime1.ToString("yyyy-MM-dd") + "_key=hkxsVmmgRja7xcnPNXiTirSSszjd59aJEqEXVCg9";
-            string url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-01-04&end_date=2021-01-05&api_key=hkxsVmmgRja7xcnPNXiTirSSszjd59aJEqEXVCg9";
+            string url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=" + dateTime1.ToString("yyyy-MM-dd") + "&end_date=" + dateTime1.ToString("yyyy-MM-dd") + "&api_key=hkxsVmmgRja7xcnPNXiTirSSszjd59aJEqEXVCg9";
+            //string url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=2021-01-04&end_date=2021-01-05&api_key=hkxsVmmgRja7xcnPNXiTirSSszjd59aJEqEXVCg9";
             try
             {
                 HttpResponseMessage responseMessage = await myclient.GetAsync(url, HttpCompletionOption.ResponseContentRead);

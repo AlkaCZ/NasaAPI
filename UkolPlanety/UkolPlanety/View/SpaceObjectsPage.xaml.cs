@@ -39,10 +39,15 @@ namespace UkolPlanety.View
                 (sender as ListView).SelectedItem = null;
 
         }
-       async void Straight_Button_Clicked(object sender, EventArgs e)
+
+        async void InfoButt_Clicked(object sender, EventArgs e)
         {
+
+                //Page p = new ASpaceObjectPage() as Models.ASpaceObject), (BindingContext as SpaceObjects).AllSpaceObjects);
+                //NavigationPage np = new NavigationPage(p);
+                //await Application.Current.MainPage.Navigation.PushAsync(np);
             
+
         }
-        
     }
 }

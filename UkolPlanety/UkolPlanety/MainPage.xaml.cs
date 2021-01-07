@@ -21,9 +21,6 @@ namespace UkolPlanety
             InitializeComponent();
         }
 
-        private void Refresh_Clicked(object sender, EventArgs e)
-        {
-        }
        
       
             

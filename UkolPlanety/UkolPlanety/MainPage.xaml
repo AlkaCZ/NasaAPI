@@ -8,7 +8,6 @@
             <Frame BackgroundColor="Gold" Padding="24" CornerRadius="0">
                 <Label Text="Seznam Těles" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             </Frame>
-            <Button x:Name="Refresh" Text="Refresh" BackgroundColor="Red" VerticalOptions="End" Clicked="Refresh_Clicked"></Button>
         </StackLayout>
     </StackLayout>
 

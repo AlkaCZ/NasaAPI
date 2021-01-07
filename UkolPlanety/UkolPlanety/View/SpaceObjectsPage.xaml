@@ -10,16 +10,16 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
-                                <Label Text="{Binding Name}" TextColor="White" FontSize="Large"></Label>
-                                <Label Text="{Binding Size}" TextColor="Aqua" FontSize="Medium"></Label>
+                                <Label Text="{Binding Name}" TextColor="White" FontSize="Large" ></Label>
+                                <Label Text="{Binding Size}" TextColor="Aqua" FontSize="Medium" ></Label>
                                 <Label Text="{Binding Speed}" TextColor="Orange" FontSize="Medium"></Label>
-                                <Label Text="{Binding IsHazerdious}" TextColor="Red" FontSize="Medium"></Label>
+                                <Label Text="{Binding IsHazerdious}" TextColor="Red" FontSize="Medium" ></Label>
+                                <Button Text="View Object" HorizontalOptions="End" Clicked="InfoButt_Clicked" x:Name="InfoButt"></Button>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="StraightAddButt" Text="Refresh" Clicked="Straight_Button_Clicked" TextColor="White" BackgroundColor="Red" HorizontalOptions="EndAndExpand"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
